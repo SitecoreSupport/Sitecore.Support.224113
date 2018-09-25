@@ -15,7 +15,7 @@
     {
         protected override string VerifyContactSubscriptions(ContactIdentifier contactIdentifier, Guid messageID)
         {
-            return base.VerifyContactSubscriptions(contactIdentifier, messageID);
+            base.VerifyContactSubscriptions(contactIdentifier, messageID);
             #region Sitecore.Support.224113
             string alreadyItemPath = ExmContext.Message.ManagerRoot.Settings.AlreadyUnsubscribedPage;
             Item alreadyItem = Database.GetDatabase("master").GetItem(alreadyItemPath);
