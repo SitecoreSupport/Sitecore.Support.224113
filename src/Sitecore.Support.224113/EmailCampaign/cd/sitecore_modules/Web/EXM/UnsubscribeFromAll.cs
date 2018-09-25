@@ -8,6 +8,9 @@
 
     public class UnsubscribeFromAll : Sitecore.EmailCampaign.Cd.sitecore_modules.Web.EXM.UnsubscribeFromAll
     {
-       
+        protected override string VerifyContactSubscriptions(ContactIdentifier contactIdentifier, Guid messageID)
+        {
+            return base.VerifyContactSubscriptions(contactIdentifier, messageID);
+        }
     }
 }

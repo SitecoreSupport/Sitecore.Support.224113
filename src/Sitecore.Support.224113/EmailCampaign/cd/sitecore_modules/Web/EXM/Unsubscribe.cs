@@ -5,10 +5,13 @@
     using Sitecore.Modules.EmailCampaign.Core;
     using Sitecore.XConnect;
     using System;
-    
+
     public class Unsubscribe : Sitecore.EmailCampaign.Cd.sitecore_modules.Web.EXM.Unsubscribe
     {
-       
-    }
+        protected override string VerifyContactSubscriptions(ContactIdentifier contactIdentifier, Guid messageID)
+        {
+            return base.VerifyContactSubscriptions(contactIdentifier, messageID);
+        }
 
+    }
 }
