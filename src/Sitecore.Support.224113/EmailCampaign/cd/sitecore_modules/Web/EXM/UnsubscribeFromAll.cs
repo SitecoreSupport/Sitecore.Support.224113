@@ -18,7 +18,7 @@
             base.VerifyContactSubscriptions(contactIdentifier, messageID);
             #region Sitecore.Support.224113
             string alreadyItemPath = ExmContext.Message.ManagerRoot.Settings.AlreadyUnsubscribedPage;
-            Item alreadyItem = Database.GetDatabase("master").GetItem(alreadyItemPath);
+            Item alreadyItem = Database.GetDatabase("web").GetItem(alreadyItemPath);
             string itemUrl = String.Empty;
             SiteInfo site = null;
             var siteInfoList = Sitecore.Configuration.Factory.GetSiteInfoList();
